@@ -5,7 +5,6 @@ import torch.nn.functional as F
 import numpy as np
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
-import SimpleITK as sitk
 import math
 import pdb 
 from utils import GaussianLayer
