@@ -262,6 +262,8 @@ if __name__ == '__main__':
     parser.add_option('--linear-probe', dest='linear_probe', action='store_true', help='if use linear probe finetuning')
     parser.add_option('-d', '--dataset', type='str', dest='dataset', 
             default='isic2018', help='name of dataset')
+    parser.add_option('--data-path', type='str', dest='data_path', 
+            default='/data/local/yg397/dataset/isic2018/', help='the path of the dataset')
     parser.add_option('-u', '--unique_name', type='str', dest='unique_name',
             default='test', help='name prefix')
      
@@ -285,20 +287,10 @@ if __name__ == '__main__':
         'isic2018': 7,
     }
 
-    data_path_dict = {
-        'isic2018': '/data/local/yg397/dataset/isic2018/',
-    }
-
     cls_weight_dict = {
         'isic2018': [1, 0.5, 1.2, 1.3, 1, 2, 2], 
     }
     
-    epoch_dict = {
-        'isic2018': 150,
-    }
-
-    config.epochs = epoch_dict[config.dataset]
-    config.data_path = data_path_dict[config.dataset]
     config.cls_weight = cls_weight_dict[config.dataset]
     config.num_class = num_class_dict[config.dataset]
 

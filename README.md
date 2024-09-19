@@ -18,12 +18,24 @@ Although explainability is essential in the clinical diagnosis, most deep learni
 
 
 ## Usage
+Python version >= 3.9
+
 ```bash
-git clone https://github.com/yourusername/explicd.git
-cd explicd
+git clone https://github.com/yhygao/Explicd.git
+cd Explicd
 pip install -r requirements.txt
 ```
 
+To train blackbox baseline model like ResNet or ViT, use
+```bash
+python train_blackbox.py --model resnet50.a1_in1k --data-path path_to_the_dataset --gpu 0
+```
+To train Explicd, use
+```bash
+python train_explicd.py --data-path path_to_the_dataset --gpu 0
+```
+
+The queried diagnostic criteria and concepts from GPT are in `concept_dataset.py`
 
 ## Citation
 
