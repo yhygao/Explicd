@@ -26,6 +26,8 @@ cd Explicd
 pip install -r requirements.txt
 ```
 
+Download the dataset from ISIC2018 website and process with scripts under `dataset_utils` or use the our processed files from [Google Drive](https://drive.google.com/drive/folders/1vf6X44zALelFXQNCAmg0_VizT4yxRkse?usp=drive_link)
+
 To train blackbox baseline model like ResNet or ViT, use
 ```bash
 python train_blackbox.py --model resnet50.a1_in1k --data-path path_to_the_dataset --gpu 0
